@@ -1,16 +1,22 @@
 {
-  "name": "Image Grabber",
-  "description": "Extract all images from current web page",
+  "name": "BS Employee Extension",
+  "description": "Filter by Name",
   "version": "1.0",
   "manifest_version": 3,
   "icons": {
-    "16": "icons/16x16.png",
-    "32": "icons/32x32.png",
-    "70": "icons/70x70.png"
+    "70": "./icons/icon.png"
   },
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["scripting", "activeTab"],
-  "background": {}
+  "browser_action": {
+    "default_icon": "./icons/icon.png",
+    "default_title": "Brüder Schlau"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "background": {},
+  "short_name": "BS Employee Extension"
 }
