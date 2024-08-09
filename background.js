@@ -3,8 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const storedValue = localStorage.getItem('filterValue');
 
   if (storedValue) {
-    input.value = storedValue; // Corrected variable name
+    input.value = storedValue;
   }
+});
+
+const calendarLink = document.getElementById('calendarLink');
+
+calendarLink.addEventListener('click', (e) => {
+  e.preventDefault(); // Prevent default link behavior
+  const url = "https://confluence.brueder-schlau.de/display/IT/calendars";
+  
+  chrome.tabs.create({ url }); // Open link in a new tab
 });
 
 const input = document.getElementById('filter');
