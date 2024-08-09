@@ -1,8 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('filter');
+  const storedValue = localStorage.getItem('filterValue');
+
+  if (storedValue) {
+    input.value = storedValue; // Corrected variable name
+  }
+});
+
 const input = document.getElementById('filter');
 const filterBtn = document.getElementById('filterBtn');
 
 filterBtn.addEventListener('click', () => {
   const query = input.value;
+  localStorage.setItem('filterValue', query);
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     let tab = tabs[0];
     if (tab) {
@@ -12,7 +22,6 @@ filterBtn.addEventListener('click', () => {
     }
   });
 });
-
 
 function execScript(tab, query) {
   chrome.scripting.executeScript(
@@ -36,7 +45,6 @@ function filter(query) {
     document.querySelectorAll(".fc-event-title").forEach((i) => {
       if (!filterMatcher.test(i.innerText)) {
         i.parentElement.parentElement.classList.add(cssInvisibleModifier);
-      } else {
       }
     });
   }
