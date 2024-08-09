@@ -37,7 +37,6 @@ function filter(query) {
       if (!filterMatcher.test(i.innerText)) {
         i.parentElement.parentElement.classList.add(cssInvisibleModifier);
       } else {
-        i.style.color = 'red';
       }
     });
   }

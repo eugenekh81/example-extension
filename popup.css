@@ -13,7 +13,3 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
-
-.bs-item--invisible {
-	display: none;
-}

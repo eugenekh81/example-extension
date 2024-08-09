@@ -17,6 +17,18 @@
     "scripting",
     "activeTab"
   ],
-  "background": {},
-  "short_name": "BS Employee Extension"
+  "background": {
+    "service_worker": "background.js"
+  },
+  "short_name": "BS Employee Extension",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://confluence.brueder-schlau.de/*"
+      ],
+      "css": [
+        "bs-chrome-extension.css"
+      ]
+    }
+  ]
 }
