@@ -8,12 +8,39 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const calendarLink = document.getElementById('calendarLink');
+const hammerProdLink = document.getElementById('hammerProdLink');
+const hammerStageLink = document.getElementById('hammerStageLink');
+const hammerDevLink = document.getElementById('hammerDevLink');
+const schlauProdLink = document.getElementById('schlauProdLink');
 
 calendarLink.addEventListener('click', (e) => {
-  e.preventDefault(); // Prevent default link behavior
+  e.preventDefault();
   const url = "https://confluence.brueder-schlau.de/display/IT/calendars";
-  
-  chrome.tabs.create({ url }); // Open link in a new tab
+  chrome.tabs.create({ url });
+});
+
+hammerProdLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  const url = "https://www.hammer-zuhause.de/";
+  chrome.tabs.create({ url });
+});
+
+hammerStageLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  const url = "https://www.stage.hammer-zuhause.de/";
+  chrome.tabs.create({ url });
+});
+
+hammerDevLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  const url = "https://local.hammer-zuhause.de:9002/schlaub2cstorefront/";
+  chrome.tabs.create({ url });
+});
+
+schlauProdLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  const url = "https://www.schlau-grosshandel.de/";
+  chrome.tabs.create({ url });
 });
 
 const input = document.getElementById('filter');

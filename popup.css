@@ -17,3 +17,11 @@ button {
 .calendar {
   text-decoration: none;
 }
+
+.hammer {
+  background-color: rgb(235, 183, 183);
+}
+
+.schlau {
+  background-color: rgb(181, 228, 181);
+}
