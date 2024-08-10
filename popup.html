@@ -12,11 +12,23 @@
 
   <a href="#" class="calendar" id="calendarLink">EDV-Kalender</a>
 
-  <input type="text" id="filter">
-  <button id="filterBtn">Filtern</button>
+  <form class="form">
+    <label>
+      <input type="text" id="filter" class="filter">
+      <button type="button" id="filterBtn">
+        <svg>
+          <use href="./icons/icon--search.svg#search"></use>
+        </svg>
+      </button>
+    </label>
+
+    <!--     <button id="filterBtn" class="filterBtn" hidden>Filtern</button> -->
+
+
+  </form>
 
   <ul id="linkList" class="links">
-</ul>
+  </ul>
 
   <script src="background.js"></script>
 </body>
