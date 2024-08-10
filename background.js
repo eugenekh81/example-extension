@@ -8,40 +8,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const calendarLink = document.getElementById('calendarLink');
-const hammerProdLink = document.getElementById('hammerProdLink');
-const hammerStageLink = document.getElementById('hammerStageLink');
-const hammerDevLink = document.getElementById('hammerDevLink');
-const schlauProdLink = document.getElementById('schlauProdLink');
-
 calendarLink.addEventListener('click', (e) => {
   e.preventDefault();
   const url = "https://confluence.brueder-schlau.de/display/IT/calendars";
   chrome.tabs.create({ url });
 });
 
-hammerProdLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  const url = "https://www.hammer-zuhause.de/";
-  chrome.tabs.create({ url });
-});
+const linksData = [
+  { id: 'hammerProdLink', text: 'Hammer Prod', url: 'https://www.hammer-zuhause.de/' },
+  { id: 'hammerStageLink', text: 'Hammer Stage', url: 'https://www.stage.hammer-zuhause.de/' },
+  { id: 'hammerDevLink', text: 'Hammer Dev', url: 'https://local.hammer-zuhause.de:9002/schlaub2cstorefront/' },
+  { id: 'schlauProdLink', text: 'Schlau Prod', url: 'https://www.schlau-grosshandel.de/' }
+];
 
-hammerStageLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  const url = "https://www.stage.hammer-zuhause.de/";
-  chrome.tabs.create({ url });
-});
+function createLinks() {
+  linksData.forEach(linkData => {
+    const listItem = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = linkData.text;
+    link.id = linkData.id;
+    link.className = 'link';
 
-hammerDevLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  const url = "https://local.hammer-zuhause.de:9002/schlaub2cstorefront/";
-  chrome.tabs.create({ url });
-});
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      chrome.tabs.create({ url: linkData.url });
+    });
 
-schlauProdLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  const url = "https://www.schlau-grosshandel.de/";
-  chrome.tabs.create({ url });
-});
+    listItem.appendChild(link);
+
+    linkList.appendChild(listItem);
+  });
+}
+
+createLinks();
 
 const input = document.getElementById('filter');
 const filterBtn = document.getElementById('filterBtn');
