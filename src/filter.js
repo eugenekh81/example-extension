@@ -22,4 +22,11 @@ export function execScript(tab, query) {
       });
     }
   }
+
+  export function handleEnterKey(event, callback) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      callback();
+    }
+  }
   
