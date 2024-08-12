@@ -41,7 +41,7 @@ export function createLists() {
 
     const summary = document.createElement('summary');
     summary.textContent = listData.title;
-    summary.className = listData.title.toLowerCase() + '-title'; 
+    summary.className = `summary-title ${listData.title.toLowerCase()}-title`;
 
     const ul = document.createElement('ul');
     ul.className = 'linksList';
@@ -53,6 +53,7 @@ export function createLists() {
       link.textContent = linkData.text;
       link.id = linkData.id;
       link.className = 'link';
+      link.target = '_blank';
 
       listItem.appendChild(link);
       ul.appendChild(listItem);

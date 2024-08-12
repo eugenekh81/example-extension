@@ -122,32 +122,26 @@ button {
 
 /* #endregion */
 
-.dev-title {
-  background-color: #add8e6;
+.summary-title {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.dev-title {
+  background-color: #add8e6;
 }
 
 .stage-title {
   background-color: #90ee90;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .prod-title {
   background-color: #ffcccb;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .other-title {
   background-color: #dda0dd;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 summary {
