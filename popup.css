@@ -122,6 +122,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
   text-align: left;
+  margin-bottom: 5px;
+}
+
+.arbeitszeit-title {
+  background-color: #e2cef1;
 }
 
 .dev-title {
@@ -136,8 +141,8 @@ button {
   background-color: #c8fecd;
 }
 
-.other-title {
-  background-color: #b8e4ff;
+.sonst-title {
+  background-color: #b4e1fd;
 }
 
 summary {
