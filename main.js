@@ -1,12 +1,12 @@
 import { loadFilterValue, saveFilterValue } from './src/storage.js';
 import { setupCalendarLink } from './src/calendar.js';
-import { createLinks } from './src/links.js';
+import { createLists } from './src/links.js';
 import { execScript, handleEnterKey } from './src/filter.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadFilterValue();
   setupCalendarLink();
-  createLinks();
+  createLists();
 });
 
 const input = document.getElementById('filter');
