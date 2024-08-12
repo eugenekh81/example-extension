@@ -14,7 +14,7 @@ body {
 }
 
 ul {
-  margin: 0;
+  margin: 10px;
   padding: 0;
 
   list-style: none;
@@ -32,7 +32,7 @@ button {
 
 .calendarLink {
   display: block;
-  margin: 0 0 8px;
+  margin: 0 0 15px;
 
   font-size: 20px;
   font-weight: 700;
@@ -121,6 +121,7 @@ button {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  text-align: left;
 }
 
 .dev-title {
