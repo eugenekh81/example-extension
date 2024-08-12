@@ -66,7 +66,7 @@ button {
   background: radial-gradient(circle, rgba(69, 222, 252, 1) 0%, rgba(49, 163, 185, 1) 100%);
 }
 
-.links {
+.linksList {
   display: flex;
   flex-direction: column;
   gap: 8px;

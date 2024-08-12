@@ -43,7 +43,7 @@ function createLinks() {
 
     listItem.appendChild(link);
 
-    linkList.appendChild(listItem);
+    linksList.appendChild(listItem);
   });
 }
 
