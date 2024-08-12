@@ -11,8 +11,6 @@ body {
 
 
   font-family: Arial, Helvetica, sans-serif;
-
-  border: 1px solid red
 }
 
 ul {
@@ -32,7 +30,7 @@ button {
   cursor: pointer;
 }
 
-.calendar {
+.calendarLink {
   display: block;
   margin: 0 0 8px;
 
@@ -40,7 +38,7 @@ button {
   font-weight: 700;
 }
 
-.form {
+.calendarForm {
   margin-bottom: 16px;
 }
 .filter {
@@ -77,27 +75,27 @@ button {
 
 /* #region FORM */
 
-.form {
+.calendarForm {
   display: flex;
   flex-direction: column;
 }
 
 
-.form label {
+.calendarForm label {
   position: relative;
 
   height: 30px;
   width: 100%;
 }
 
-.form input {
+.calendarForm input {
   position: absolute;
 
   left: 0;
   right: 0
 }
 
-.form svg {
+.calendarForm svg {
   position: absolute;
   top: 50%;
   right: 14px;
@@ -111,8 +109,8 @@ button {
   transition: color 0.3s;
 }
 
-.form:hover svg,
-.form input:focus + button svg {
+.calendarForm:hover svg,
+.calendarForm input:focus + button svg {
   color: lightblue
 }
 
