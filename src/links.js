@@ -41,6 +41,7 @@ export function createLists() {
 
     const summary = document.createElement('summary');
     summary.textContent = listData.title;
+    summary.className = listData.title.toLowerCase() + '-title'; 
 
     const ul = document.createElement('ul');
     ul.className = 'linksList';
