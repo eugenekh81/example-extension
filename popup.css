@@ -115,9 +115,8 @@ button {
 }
 
 .calendarForm:hover svg,
-.calendarForm input:focus+button svg,
-.clear-button:hover svg,
-.clear-button:focus {
+.calendarForm input:focus + button svg,
+.calendarForm input:focus + button + button svg {
   color: lightblue;
 }
 
