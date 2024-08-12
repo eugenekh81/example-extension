@@ -11,9 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const input = document.getElementById('filter');
 const filterBtn = document.getElementById('filterBtn');
+const clearBtn = document.getElementById('clearBtn');
 
 filterBtn.addEventListener('click', () => {
   const query = input.value;
+  saveFilterValue(query);
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    let tab = tabs[0];
+    if (tab) {
+      execScript(tab, query);
+    } else {
+      alert('There are no active tabs');
+    }
+  });
+});
+
+clearBtn.addEventListener('click', () => {
+  input.value = '';
+  const query = '';
   saveFilterValue(query);
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     let tab = tabs[0];

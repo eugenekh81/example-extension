@@ -99,7 +99,7 @@ button {
 .calendarForm svg {
   position: absolute;
   top: 50%;
-  right: 14px;
+  right: 30px;
   transform: translateY(-50%);
 
   height: 16px;
@@ -110,8 +110,14 @@ button {
   transition: color 0.3s;
 }
 
+.clear-button svg {
+  right: 10px;
+}
+
 .calendarForm:hover svg,
-.calendarForm input:focus+button svg {
+.calendarForm input:focus+button svg,
+.clear-button:hover svg,
+.clear-button:focus {
   color: lightblue;
 }
 
