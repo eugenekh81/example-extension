@@ -74,11 +74,6 @@ button {
   text-align-last: left;
 }
 
-.linksList li:first-child {
-  font-size: 15px;
-  font-weight: 700;
-}
-
 /* #region FORM */
 
 .calendarForm {
@@ -129,19 +124,19 @@ button {
 }
 
 .dev-title {
-  background-color: #add8e6;
+  background-color: #fecece;
 }
 
 .stage-title {
-  background-color: #90ee90;
+  background-color: #ffffb4;
 }
 
 .prod-title {
-  background-color: #ffcccb;
+  background-color: #c8fecd;
 }
 
 .other-title {
-  background-color: #dda0dd;
+  background-color: #b8e4ff;
 }
 
 summary {
