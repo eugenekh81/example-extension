@@ -117,6 +117,8 @@ button {
 
 /* #endregion */
 
+/* #region LINKS */
+
 .summary-title {
   padding: 10px;
   border-radius: 5px;
@@ -148,8 +150,15 @@ button {
 summary {
   font-weight: bold;
   color: #333;
+  list-style: none;
 }
 
 details[open] summary {
   background-color: #f0f0f0;
 }
+
+details {
+  position: relative;
+}
+
+/* #endregion */
