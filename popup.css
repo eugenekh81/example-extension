@@ -36,8 +36,10 @@ button {
 }
 
 .calendarLink {
-  text-align-last: left;
-  margin-bottom: 8px;
+  text-align: left;
+  margin: 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgb(220, 220, 220);
 }
 
 .calendarForm {
@@ -78,6 +80,7 @@ button {
 
 .link {
   border-bottom: 1px solid rgb(220, 220, 220);
+  padding-bottom: 3px;
 }
 
 .link:hover {
