@@ -12,6 +12,13 @@ export function createLists() {
       ]
     },
     {
+      title: 'Sonst',
+      links: [
+        { id: 'ServiceNamesLink', text: 'Servicenamen', url: 'https://confluence.brueder-schlau.de/display/EC/Server-+und+Servicenamen' },
+        { id: 'cheatSheet', text: 'eCommerce CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' }
+      ]
+    },
+    {
       title: 'Dev',
       links: [
         { id: 'hammerDevLink', text: 'Hammer', url: 'https://local.hammer-zuhause.de:9002/schlaub2cstorefront/' },
@@ -32,13 +39,6 @@ export function createLists() {
       links: [
         { id: 'hammerProdLink', text: 'Hammer', url: 'https://www.hammer-zuhause.de/' },
         { id: 'schlauProdLink', text: 'Schlau', url: 'https://www.schlau-grosshandel.de/' }
-      ]
-    },
-    {
-      title: 'Sonst',
-      links: [
-        { id: 'ServiceNamesLink', text: 'Servicenamen', url: 'https://confluence.brueder-schlau.de/display/EC/Server-+und+Servicenamen' },
-        { id: 'cheatSheet', text: 'eCommerce CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' }
       ]
     }
   ];
