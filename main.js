@@ -2,10 +2,12 @@ import { loadFilterValue, saveFilterValue } from './src/storage.js';
 import { setupCalendarLink } from './src/calendar.js';
 import { createLists } from './src/links.js';
 import { execScript, handleEnterKey } from './src/filter.js';
+import { setupJiraLink } from './src/jira.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadFilterValue();
   setupCalendarLink();
+  setupJiraLink();
   createLists();
 });
 

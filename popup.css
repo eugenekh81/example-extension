@@ -5,18 +5,14 @@
 body {
   margin: 0;
   padding: 24px;
-
   text-align: center;
   width: 240px;
-
-
   font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
   margin: 10px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -35,40 +31,25 @@ button {
   margin-bottom: 10px;
 }
 
-.calendarLink {
+.calendarLink,
+.jiraLink {
   text-align: left;
   margin: 10px;
   padding-bottom: 3px;
   border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-.calendarForm {
+.calendarForm,
+.jiraForm {
   margin-bottom: 16px;
 }
 
 .filter {
   padding: 6px 12px;
-
   width: 100%;
-
   border-radius: 24px;
   outline: none;
   border: 1px solid #b4b3b3;
-}
-
-.filterBtn {
-  margin: 0 0 18px;
-  padding: 6px 12px;
-  line-height: 17.5px;
-
-  width: 100%;
-
-  border-radius: 24px;
-  outline: none;
-  color: white;
-  border: none;
-
-  background: radial-gradient(circle, rgba(69, 222, 252, 1) 0%, rgba(49, 163, 185, 1) 100%);
 }
 
 .linksList {
@@ -88,39 +69,40 @@ button {
 }
 
 /* #region FORM */
-
-.calendarForm {
+.calendarForm,
+.jiraForm {
   display: flex;
   flex-direction: column;
 }
 
-
-.calendarForm label {
+.calendarForm label,
+.jiraForm label {
   position: relative;
-
   height: 30px;
   width: 100%;
 }
 
-.calendarForm input {
+.calendarForm input,
+.jiraForm input {
   position: absolute;
-
   left: 0;
-  right: 0
+  right: 0;
 }
 
-.calendarForm svg {
+.calendarForm svg,
+.jiraForm svg {
   position: absolute;
   top: 50%;
   right: 30px;
   transform: translateY(-50%);
-
   height: 16px;
   width: 16px;
-
   color: #000;
-
   transition: color 0.3s;
+}
+
+.jiraForm svg {
+  right: 10px;
 }
 
 .clear-button svg {
@@ -129,7 +111,9 @@ button {
 
 .calendarForm:hover svg,
 .calendarForm input:focus + button svg,
-.calendarForm input:focus + button + button svg {
+.calendarForm input:focus + button + button svg,
+.jiraForm:hover svg,
+.jiraForm input:focus + button svg {
   color: rgb(90, 90, 90);
 }
 
