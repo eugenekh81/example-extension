@@ -23,8 +23,11 @@ export function createLists() {
     {
       title: 'Sonst',
       links: [
+        { text: 'Intranet', url: 'https://confluence.brueder-schlau.de/' },
+        { text: 'Bitbucket', url: 'https://bitbucket.infra.brueder-schlau.de/dashboard/' },
+        { text: 'Bamboo', url: 'https://bamboo.infra.brueder-schlau.de/' },
         { text: 'Servicenamen', url: 'https://confluence.brueder-schlau.de/display/EC/Server-+und+Servicenamen' },
-        { text: 'eCommerce CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' },
+        { text: 'CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' },
         { text: 'Initiales Setup (Entwickler)', url: 'https://confluence.brueder-schlau.de/pages/viewpage.action?pageId=2494133' }
       ]
     },
@@ -33,7 +36,8 @@ export function createLists() {
       links: [
         { text: 'Hammer Dev', url: 'https://local.hammer-zuhause.de:9002/schlaub2cstorefront/' },
         { text: 'Schlau Dev', url: 'https://local.hammer-zuhause.de:9002/schlaustorefront/' },
-        { text: 'Backoffice Dev', url: 'https://local.hammer-zuhause.de:9002/backoffice' }
+        { text: 'Backoffice Dev', url: 'https://local.hammer-zuhause.de:9002/backoffice' },
+        { text: 'CMS Cockpit Dev', url: 'https://local.hammer-zuhause.de:9002/cmscockpit' }
       ]
     },
     {
