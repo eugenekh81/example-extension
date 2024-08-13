@@ -12,10 +12,20 @@ export function createLists() {
       ]
     },
     {
+      title: 'Deployment',
+      links: [
+        { id: 'deploymentBlog', text: 'Deployment ankündigen', url: 'https://confluence.brueder-schlau.de/pages/viewrecentblogposts.action?key=EC' },
+        { id: 'deploymentStart', text: 'Deployment starten', url: 'https://confluence.brueder-schlau.de/display/EC/Release+Management+-+Bamboo' },
+        { id: 'releases', text: 'Releases', url: 'https://bamboo.infra.brueder-schlau.de/deploy/viewDeploymentProjectVersions.action?id=88244225' },
+        { id: 'manuelleTest', text: 'Manuelle Tests Guide', url: 'https://confluence.brueder-schlau.de/pages/viewpage.action?spaceKey=EC&title=Manuelle+Tests' }
+      ]
+    },
+    {
       title: 'Sonst',
       links: [
         { id: 'ServiceNamesLink', text: 'Servicenamen', url: 'https://confluence.brueder-schlau.de/display/EC/Server-+und+Servicenamen' },
-        { id: 'cheatSheet', text: 'eCommerce CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' }
+        { id: 'cheatSheet', text: 'eCommerce CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' },
+        { id: 'initialesSetup', text: 'Initiales Setup (Entwickler)', url: 'https://confluence.brueder-schlau.de/pages/viewpage.action?pageId=2494133' }
       ]
     },
     {
