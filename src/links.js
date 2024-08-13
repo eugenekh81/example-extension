@@ -7,48 +7,50 @@ export function createLists() {
     {
       title: 'Arbeitszeit',
       links: [
-        { id: 'timeTracking', text: 'Zeiterfassung', url: 'https://vhbrup01ai01.rot.sap.brueder-schlau.de:44300/sap/bc/webdynpro/sap/zess_clockinout#' },
-        { id: 'entry', text: 'Einstieg', url: 'https://vhbrup01ai02.rot.sap.brueder-schlau.de:44300/nwbc/' }
+        { text: 'Zeiterfassung', url: 'https://vhbrup01ai01.rot.sap.brueder-schlau.de:44300/sap/bc/webdynpro/sap/zess_clockinout#' },
+        { text: 'Einstieg', url: 'https://vhbrup01ai02.rot.sap.brueder-schlau.de:44300/nwbc/' }
       ]
     },
     {
       title: 'Deployment',
       links: [
-        { id: 'deploymentBlog', text: 'Deployment ankündigen', url: 'https://confluence.brueder-schlau.de/pages/viewrecentblogposts.action?key=EC' },
-        { id: 'deploymentStart', text: 'Deployment starten', url: 'https://confluence.brueder-schlau.de/display/EC/Release+Management+-+Bamboo' },
-        { id: 'releases', text: 'Releases', url: 'https://bamboo.infra.brueder-schlau.de/deploy/viewDeploymentProjectVersions.action?id=88244225' },
-        { id: 'manuelleTest', text: 'Manuelle Tests Guide', url: 'https://confluence.brueder-schlau.de/pages/viewpage.action?spaceKey=EC&title=Manuelle+Tests' }
+        { text: 'Deployment ankündigen', url: 'https://confluence.brueder-schlau.de/pages/viewrecentblogposts.action?key=EC' },
+        { text: 'Deployment starten', url: 'https://confluence.brueder-schlau.de/display/EC/Release+Management+-+Bamboo' },
+        { text: 'Releases', url: 'https://bamboo.infra.brueder-schlau.de/deploy/viewDeploymentProjectVersions.action?id=88244225' },
+        { text: 'Manuelle Tests Guide', url: 'https://confluence.brueder-schlau.de/pages/viewpage.action?spaceKey=EC&title=Manuelle+Tests' }
       ]
     },
     {
       title: 'Sonst',
       links: [
-        { id: 'ServiceNamesLink', text: 'Servicenamen', url: 'https://confluence.brueder-schlau.de/display/EC/Server-+und+Servicenamen' },
-        { id: 'cheatSheet', text: 'eCommerce CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' },
-        { id: 'initialesSetup', text: 'Initiales Setup (Entwickler)', url: 'https://confluence.brueder-schlau.de/pages/viewpage.action?pageId=2494133' }
+        { text: 'Servicenamen', url: 'https://confluence.brueder-schlau.de/display/EC/Server-+und+Servicenamen' },
+        { text: 'eCommerce CheatSheet', url: 'https://confluence.brueder-schlau.de/display/EC/eCommerce+CheatSheet' },
+        { text: 'Initiales Setup (Entwickler)', url: 'https://confluence.brueder-schlau.de/pages/viewpage.action?pageId=2494133' }
       ]
     },
     {
       title: 'Dev',
       links: [
-        { id: 'hammerDevLink', text: 'Hammer', url: 'https://local.hammer-zuhause.de:9002/schlaub2cstorefront/' },
-        { id: 'schlauDevLink', text: 'Schlau', url: 'https://local.hammer-zuhause.de:9002/schlaustorefront/' },
-        { id: 'backofficeDev', text: 'Backoffice', url: 'https://local.hammer-zuhause.de:9002/backoffice' }
+        { text: 'Hammer Dev', url: 'https://local.hammer-zuhause.de:9002/schlaub2cstorefront/' },
+        { text: 'Schlau Dev', url: 'https://local.hammer-zuhause.de:9002/schlaustorefront/' },
+        { text: 'Backoffice Dev', url: 'https://local.hammer-zuhause.de:9002/backoffice' }
       ]
     },
     {
       title: 'Stage',
       links: [
-        { id: 'hammerStageLink', text: 'Hammer', url: 'https://www.stage.hammer-zuhause.de/' },
-        { id: 'schlauStageLink', text: 'Schlau', url: 'https://www.stage.schlau-grosshandel.de/' },
-        { id: 'backofficeStage', text: 'Backoffice', url: 'https://hybris-cockpits.stage.brueder-schlau.de/backoffice/login.zul' }
+        { text: 'Hammer Stage', url: 'https://www.stage.hammer-zuhause.de/' },
+        { text: 'Schlau Stage', url: 'https://www.stage.schlau-grosshandel.de/' },
+        { text: 'Backoffice Stage', url: 'https://hybris-cockpits.stage.brueder-schlau.de/backoffice/' },
+        { text: 'CMS Cockpit Stage', url: 'https://hybris-cockpits.stage.brueder-schlau.de/cmscockpit/' },
+        { text: 'Product Cockpit Stage', url: 'https://hybris-cockpits.stage.brueder-schlau.de/backoffice/login.zul' }
       ]
     },
     {
       title: 'Prod',
       links: [
-        { id: 'hammerProdLink', text: 'Hammer', url: 'https://www.hammer-zuhause.de/' },
-        { id: 'schlauProdLink', text: 'Schlau', url: 'https://www.schlau-grosshandel.de/' }
+        { text: 'Hammer Prod', url: 'https://www.hammer-zuhause.de/' },
+        { text: 'Schlau Prod', url: 'https://www.schlau-grosshandel.de/' }
       ]
     }
   ];
@@ -68,7 +70,7 @@ export function createLists() {
       const link = document.createElement('a');
       link.href = linkData.url;
       link.textContent = linkData.text;
-      link.id = linkData.id;
+      link.id = generateIdFromText(linkData.text);
       link.className = 'link';
       link.target = '_blank';
 
@@ -81,4 +83,18 @@ export function createLists() {
 
     listsContainer.appendChild(details);
   });
+}
+
+function generateIdFromText(text) {
+  return text
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .toLowerCase()
+    .split(' ')
+    .map((word, index) =>
+      index === 0
+        ? word
+        : word.charAt(0).toUpperCase() + word.slice(1))
+    .join('');
 }
