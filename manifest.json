@@ -1,6 +1,6 @@
 {
   "name": "BS Employee Extension",
-  "description": "Filter by Name",
+  "description": "Filter by Name, Jira, Links",
   "version": "1.0",
   "manifest_version": 3,
   "icons": {
