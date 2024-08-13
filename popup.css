@@ -39,6 +39,11 @@ button {
   border-bottom: 1px solid rgb(220, 220, 220);
 }
 
+.calendarLink:hover,
+.jiraLink:hover {
+  color: rgb(90, 90, 90);
+}
+
 .calendarForm,
 .jiraForm {
   margin-bottom: 16px;
@@ -147,6 +152,10 @@ summary {
   font-weight: bold;
   color: #333;
   list-style: none;
+}
+
+summary:hover {
+  filter: brightness(97%);
 }
 
 details[open] summary {
